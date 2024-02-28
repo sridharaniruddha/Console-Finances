@@ -25,3 +25,6 @@ My deployed site can be accessed using the link here https://sridharaniruddha.gi
 
 I've attached a screenshot of my site below.
 <img width="1728" alt="site screenshot" src="https://github.com/sridharaniruddha/Console-Finances/assets/152184230/36cd901f-5afc-4eeb-b0ac-27ef177af174">
+
+# Credits
+Source code and tutorials from edX Bootcamp
