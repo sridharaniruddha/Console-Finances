@@ -87,3 +87,28 @@ var finances = [
     ['Feb-2017', 671099],
   ];
   
+
+  // Declare Variables and functions
+  function finalcialAnalysis(finances) {
+    var totalMonths = finances.length;
+    var netProfit = 0;
+    var greatestIncrease = { month: '', amount: 0 };
+    var greatestDecrease = { month: '', amount: 0 };
+    var totalChange = 0;
+//end variables
+
+    for (var i = 0; i < finances.length; i++) {
+      var month = finances[i][0];
+      var profitLoss = finances[i][1];
+
+
+      // calculation for total profit/loss
+      netProfit += profitLoss;
+    
+      var change = netProfit - finances
+      totalChange=+ change
+
+  
+
+
+  }
