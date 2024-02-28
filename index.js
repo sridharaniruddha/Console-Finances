@@ -89,7 +89,7 @@ var finances = [
   
 
   // Declare Variables and functions
-  function finalcialAnalysis(finances) {
+  function financialAnalysis(finances) {
     var totalMonths = finances.length;
     var netProfit = 0;
     var greatestIncrease = { month: '', amount: 0 };
@@ -105,10 +105,41 @@ var finances = [
       // calculation for total profit/loss
       netProfit += profitLoss;
     
-      var change = netProfit - finances
-      totalChange=+ change
+      // changes to profit\loss
+
+      // var change = netProfit - finances
+      // totalChange=+ change
+
+      if (i > 0) {
+        var change = profitLoss - finances[i - 1][1];
+        totalChange += change;
+
+      // greatest increase and decrease? correct code later
+
+        if (change > greatestIncrease.amount) {
+          greatestIncrease.month = month;
+          greatestIncrease.amount = change;
+        }
+        if (change < greatestDecrease.amount) {
+          greatestDecrease.month = month;
+          greatestDecrease.amount = change;
+  
+        }
+      }
+    }
+
+      // to calculate the average of the changes in profit / loss in the whole period
+  var averageChange = totalChange / (totalMonths - 1); 
 
   
-
-
+  // print the results after calculation
+  console.log("Financial Analysis");
+  console.log("Total Months:", totalMonths);
+  console.log("Total: $", netProfit);
+  console.log("Average Change: $", averageChange.toFixed(2)); 
+  console.log("Greatest Increase in Profits/Losses:", greatestIncrease.month, "($", greatestIncrease.amount, ")");
+  console.log("Greatest Decrease in Profits/Losses:", greatestDecrease.month, "($", greatestDecrease.amount, ")");
   }
+
+  
+  financialAnalysis(finances);
